@@ -1,6 +1,6 @@
 import { useScoreStore } from "@/hooks/score";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 interface propsType {
   description: string;
