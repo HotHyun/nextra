@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': 18.11.10
+  '@types/react': ^18.0.28
+  '@types/react-dom': ^18.0.11
   autoprefixer: ^10.4.13
   bootstrap: ^5.2.3
   js-cookie: ^3.0.1
@@ -20,13 +22,15 @@ specifiers:
   zustand: ^4.3.6
 
 dependencies:
+  '@types/react': 18.0.28
+  '@types/react-dom': 18.0.11
   bootstrap: 5.2.3
   js-cookie: 3.0.1
   next: 13.2.1_biqbaboplfbrettd7655fr4n2y
   nextra: 2.2.17_qgtcjgzkkjtbiyvnx7d32fl5vu
   nextra-theme-docs: 2.2.17_zl6l2u5nt7wm3uumm6byqhssr4
   react: 18.2.0
-  react-bootstrap: 2.7.2_biqbaboplfbrettd7655fr4n2y
+  react-bootstrap: 2.7.2_zula6vjvt3wdocc4mwcxqa6nzi
   react-dom: 18.2.0_react@18.2.0
   react-hot-toast: 2.4.0_biqbaboplfbrettd7655fr4n2y
   react-icons: 4.7.1_react@18.2.0
@@ -456,6 +460,12 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: false
+
+  /@types/react-dom/18.0.11:
+    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
+    dependencies:
+      '@types/react': 18.0.28
     dev: false
 
   /@types/react-transition-group/4.4.5:
@@ -2229,7 +2239,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /react-bootstrap/2.7.2_biqbaboplfbrettd7655fr4n2y:
+  /react-bootstrap/2.7.2_zula6vjvt3wdocc4mwcxqa6nzi:
     resolution: {integrity: sha512-WDSln+mG4RLLFO01stkj2bEx/3MF4YihK9D/dWnHaSxOiQZLbhhlf95D2Jb20X3t2m7vMxRe888FVrfLJoGmmA==}
     peerDependencies:
       '@types/react': '>=16.14.8'
@@ -2242,6 +2252,7 @@ packages:
       '@babel/runtime': 7.21.0
       '@restart/hooks': 0.4.9_react@18.2.0
       '@restart/ui': 1.6.1_biqbaboplfbrettd7655fr4n2y
+      '@types/react': 18.0.28
       '@types/react-transition-group': 4.4.5
       classnames: 2.3.2
       dom-helpers: 5.2.1
