@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-const Start_Button = (props) => {
+interface propsType {
+  description: string;
+  title: string;
+  query: string;
+}
+
+const Start_Button = (props: propsType) => {
   const search = " ";
   const replaceWith = "_";
   const URL_Result = props.title.replaceAll(search, replaceWith);

@@ -2,7 +2,11 @@ import { useScoreStore } from "@/hooks/score";
 import React, { useEffect, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 
-const PageKey = (props) => {
+interface propsType {
+  route: string;
+}
+
+const PageKey = (props: propsType) => {
   const { ref, inView } = useInView();
   const { setScore } = useScoreStore();
   const docPageKey = `${props.route}`;

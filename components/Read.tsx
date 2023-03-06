@@ -2,7 +2,12 @@ import { useScoreStore } from "@/hooks/score";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const Read = (props) => {
+interface propsType {
+  route: string;
+  title: string;
+}
+
+const Read = (props: propsType) => {
   const router = useRouter();
   const [view_title, setView_title] = useState("");
   const { score } = useScoreStore();

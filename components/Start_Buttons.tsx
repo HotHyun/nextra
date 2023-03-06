@@ -1,6 +1,18 @@
 import Button from "../components/Start_Button";
 
-const Start_Buttons = (props) => {
+interface propsType {
+  title_1: string;
+  description_1: string;
+  query_1: string;
+  title_2: string;
+  description_2: string;
+  query_2: string;
+  title_3: string;
+  description_3: string;
+  query_3: string;
+}
+
+const Start_Buttons = (props: propsType) => {
   return (
     <div className="flex">
       <div className="mr-4 w-1/3">

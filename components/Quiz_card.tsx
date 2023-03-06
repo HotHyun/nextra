@@ -2,16 +2,22 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useScoreStore } from "@/hooks/score";
 
-const Quiz_card = (props) => {
+interface propsType {
+  answer: string;
+  problem: string;
+  description: string;
+}
+
+const Quiz_card = (props: propsType) => {
   const [answer, setAnswer] = useState("");
 
   const { setScore } = useScoreStore();
 
-  const targetHandler = (event) => {
+  const targetHandler = (event: any) => {
     setAnswer(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = (event: any) => {
     event.preventDefault();
     console.log(answer);
   };

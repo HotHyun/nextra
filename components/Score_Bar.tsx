@@ -2,7 +2,11 @@ import { useScoreStore } from "@/hooks/score";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const Score_Bar = (props) => {
+interface propsType {
+  description: string;
+}
+
+const Score_Bar = (props: propsType) => {
   // const [score, setScore] = useState(0);
 
   const { score, setScore } = useScoreStore();

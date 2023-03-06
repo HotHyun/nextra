@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-const Doc_Image = (props) => {
+interface propsType {
+  src: string;
+}
+
+const Doc_Image = (props: propsType) => {
   const [loading, setLoading] = useState(true);
 
   return (
