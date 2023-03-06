@@ -1,3 +1,7 @@
 {
+  "--": {
+    "type": "separator",
+    "title": "This is Score Bar"
+  },
   "Dietary_Control": "식이조절"
 }

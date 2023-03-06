@@ -9,3 +9,14 @@
    - 보리차, 옥수수차, 결명자차, 현미차, 루이보스차, 히비스커스차
 
 이 외에는 여러 이유로 식수를 대체할 수 없습니다. 또 옥수수수염차는 옥수수차와는 달리 이뇨 작용이 강해 식수를 대체해 마시기에 적합하지 않으니 주의! 물론 커피나 차 종류를 무조건 먹지 말라는 의미는 아닙니다. 식수를 대체할 수 없다는 의미일 뿐이니 혼동하지 마세요.
+
+import PageKey from "../../../components/PageKey";
+
+import { useRouter } from "next/router";
+
+export const Final = () => {
+  const router = useRouter();
+  return <PageKey route={router.pathname} />;
+};
+
+<Final />

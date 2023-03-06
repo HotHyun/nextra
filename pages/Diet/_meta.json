@@ -1,4 +1,8 @@
 {
+  "--": {
+    "type": "separator",
+    "title": "This is Score Bar"
+  },
   "index": "Introduction",
   "92kg": "92kg",
   "88kg": "88kg",

@@ -1,3 +1,18 @@
 # Introduction
 
-- 수지가 기초 체력을 다 길렀다고 생각했을 때, 이제 본격적으로 운동을 하기 위해 헬스장을 가려 합니다. 여기서 들 수 있는 한가지 의문. ‘굳이 돈 내고 헬스장에 다닐 필요가 있을까? 걷기만 해도 살이 빠지는 것 같은데.. ‘. 먼저 그 의문에 대한 답을 알고 헬스장에 들어가봅시다!
+import Doc_Image from "../../../../components/Doc_Image";
+
+<Doc_Image src="/img/gym.jpg"/>
+
+수지가 기초 체력을 다 길렀다고 생각했을 때, 이제 본격적으로 운동을 하기 위해 **헬스장**을 가려 합니다. 여기서 들 수 있는 한가지 의문. ‘굳이 돈 내고 헬스장에 다닐 필요가 있을까? 걷기만 해도 살이 빠지는 것 같은데..‘ 먼저 그 의문에 대한 답을 알고 헬스장에 들어가봅시다!
+
+import PageKey from "../../../../components/PageKey";
+
+import { useRouter } from "next/router";
+
+export const Final = () => {
+  const router = useRouter();
+  return <PageKey route={router.pathname} />;
+};
+
+<Final />
