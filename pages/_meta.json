@@ -7,6 +7,10 @@
       "layout": "full"
     }
   },
+  "--": {
+    "type": "separator",
+    "title": "This is Score Bar"
+  },
   "Diet": {
     "title": "Diet",
     "type": "page"
