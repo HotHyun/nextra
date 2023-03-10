@@ -3,188 +3,91 @@ import Link from "next/link";
 import Image from "next/image";
 import Start_Buttons from "../components/Start_Buttons";
 import Button from "../components/Start_Button";
+import Middle from "../components/Middle";
+import Middle_2xl from "../components/Middle_2xl";
 
 export const HomePage = () => {
-return (
-
-<div>
-  <h1 className="font-extrabold text-8xl mx-24 mt-[150px] text-center text-black dark:text-white">
-    The Diet Documentation for the Dieter
-  </h1>
-  <p className="text-xl text-center mt-[40px] text-gray-500 dark:text-gray-300">
-    다이어트를 처음 시작하는 사람들에게 바치는 Diet Web-Interactive-Contents
-  </p>
-  <p className="text-xl text-center text-gray-500 dark:text-gray-300">
-    물 흘러가듯 짜여진 스토리와 거기에 스며든 건강관리에 대한 양질의 자료들의
-    집합체
-  </p>
-  <div className="flex flex-right justify-center mt-[60px]">
-    <Link href="/Diet">
-      <button className="w-56 h-12 p-2 rounded-lg bg-black dark:bg-white text-gray-200 dark:text-gray-700 hover:text-white dark:hover:text-black font-medium shadow-lg shadow-gray-300 dark:shadow-gray-600 hover:shadow-xl hover:shadow-gray-300 dark:hover:shadow-gray-700 duration-200">
-        Start Diet
-      </button>
-    </Link>
-    <div className="m-4"></div>
-    <Link href="/about/Dietary_Control">
-      <button className="w-56 h-12 border border-gray-100 dark:border-none p-2 rounded-lg bg-white dark:bg-black text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-white font-medium shadow-lg shadow-gray-200 dark:shadow-gray-700 hover:shadow-xl hover:shadow-gray-200 dark:hover:shadow-gray-700 duration-200">
-        자료실
-      </button>
-    </Link>
-  </div>
-  <div>
-    <div className="w-auto h-[120px]" />
-    <div className="2xl:flex">
-      <Link href="/Diet" className="2xl:flex-none">
-        <button className="group rounded-[2rem] shadow-xl shadow-gray-300 dark:shadow-gray-700 relative w-[870px] aspect-[2160/1400] bg-gradient-to-br from-purple-400 to-violet-500 dark:from-teal-300 dark:to-teal-500">
-          <p className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-start justify-center text-white text-center font-bold mt-7 text-3xl">
-            Powerful Diet Documentation
-          </p>
-          <Image
-            className="rounded-[0.5rem] absolute top-12 bottom-0 left-0 z-10 right-0 mx-auto my-auto group-hover:w-[771px] group-hover:aspect-[730/411] shadow-xl shadow-gray-600 group-hover:shadow-xl group-hover:shadow-gray-800 duration-200"
-            src="/img/Intro_Image.png"
-            alt="This is Web-Intro-Image"
-            width={765}
-            height={765}
+  return (
+    <div className="2xl:mx-auto mx-0 flex justify-center items-center">
+      <div className="w-[1408px] max-2xl:w-full">
+        <h1 className="font-extrabold text-8xl mx-24 mt-[150px] text-center text-black dark:text-white max-[901px]:text-7xl max-[901px]:mt-[120px] max-[723px]:text-6xl max-[723px]:mt-[110px] max-[723px]:mx-16 max-[573px]:text-5xl max-[573px]:mt-[100px] max-[573px]:mx-12 max-[454px]:text-4xl max-[454px]:mt-[95px] max-[454px]:mx-8">
+          The Diet Documentation for the Dieter
+        </h1>
+        <p className="text-xl text-center mt-[40px] text-gray-500 dark:text-gray-300 max-[723px]:text-lg max-[723px]:mx-4 max-[623px]:text-sm max-[500px]:text-[12px] max-[432px]:text-[10px] max-[368px]:text-[6px]">
+          다이어트를 처음 시작하는 사람들에게 바치는 Diets
+          Web-Interactive-Contents
+        </p>
+        <p className="text-xl text-center text-gray-500 dark:text-gray-300 max-[723px]:text-lg max-[723px]:mx-4 max-[623px]:text-sm max-[500px]:text-[12px] max-[432px]:text-[10px] max-[368px]:text-[6px]">
+          물 흘러가듯 짜여진 스토리와 거기에 스며든 건강관리에 대한 양질의
+          자료들의 집합체
+        </p>
+        <div className="flex flex-right justify-center items-center mt-[60px] max-[558px]:mt-[45px] max-[474px]:mt-[35px]">
+          <Link href="/Diet">
+            <button className="text-center flex items-center justify-center w-56 max-[558px]:w-48 max-[474px]:w-40 max-[474px]:h-10 max-[474px]:text-sm max-[404px]:w-32 max-[404px]:h-8 max-[404px]:text-[12px] h-12 p-2 rounded-lg bg-black dark:bg-white text-gray-200 dark:text-gray-700 hover:text-white dark:hover:text-black font-medium shadow-lg shadow-gray-300 dark:shadow-gray-600 hover:shadow-xl hover:shadow-gray-300 dark:hover:shadow-gray-700 duration-200">
+              Start Diet
+            </button>
+          </Link>
+          <div className="m-4"></div>
+          <Link href="/about/Dietary_Control">
+            <button className="text-center flex items-center justify-center w-56 max-[558px]:w-48 max-[474px]:w-40 max-[474px]:h-10 max-[474px]:text-sm max-[404px]:w-32 max-[404px]:h-8 max-[404px]:text-[12px] h-12 border border-gray-100 dark:border-none p-2 rounded-lg bg-white dark:bg-black text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-white font-medium shadow-lg shadow-gray-200 dark:shadow-gray-700 hover:shadow-xl hover:shadow-gray-200 dark:hover:shadow-gray-700 duration-200">
+              자료실
+            </button>
+          </Link>
+        </div>
+        <div className="w-auto h-[120px]" />
+        <Middle />
+        <Middle_2xl />
+        <div className="w-auto h-[120px] max-[543px]:h-[80px]"></div>
+        <p className="font-extrabold text-7xl mx-24 mt-12 mb-12 max-2xl:mx-12 text-center text-black dark:text-white max-[987px]:text-6xl max-[840px]:text-5xl max-[692px]:text-4xl max-[692px]:mb-6 max-[543px]:text-3xl max-[469px]:text-2xl max-[469px]:mb-2 max-[395px]:text-xl max-[345px]:text-lg">
+          우리 함께 건강 상식 배우러가요!
+        </p>
+        <div className="mb-48 max-2xl:mx-8">
+          <Start_Buttons
+            title_1=""
+            description_1="Introduction"
+            query_1="/Diet"
+            title_2=""
+            description_2="92kg"
+            query_2="/Diet/92kg"
+            title_3=""
+            description_3="환경을 만들자!"
+            query_3="/Diet/92kg/Make_Environment"
           />
-        </button>
-      </Link>
-      <Link href="/Diet" className="2xl:grow 2xl:ml-8">
-        <button className="2xl:mt-0 mt-8 group w-full h-full rounded-[2rem] shadow-xl shadow-gray-300 dark:shadow-gray-700 relative bg-gradient-to-br from-purple-400 to-violet-500 dark:from-teal-300 dark:to-teal-500">
-          <p className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-start justify-center text-white text-center font-bold mt-7 text-3xl">
-            Gamification, Web-Interactive
-          </p>
-          <div className="flex flex-row justify-between w-full h-full px-8">
-            <Image
-              className="rounded-[0.5rem] my-8 2xl:mb-12 2xl:my-auto shadow-xl shadow-gray-600 group-hover:shadow-xl group-hover:shadow-gray-800 group-hover:w-[182px] duration-200"
-              src="/img/zero-score.jpeg"
-              alt="This is Web-Intro-Image"
-              width={180}
-              height={180}
-            />
-            <Image
-              className="rounded-[0.5rem] my-auto align-middle duration-200"
-              src="/img/white-arrow.png"
-              alt="This is Web-Intro-Image"
-              width={25}
-              height={25}
-            />
-            <Image
-              className="rounded-[0.5rem] my-8 2xl:mb-12 2xl:my-auto duration-200 shadow-xl shadow-gray-600 group-hover:shadow-xl group-hover:shadow-gray-800 group-hover:w-[182px]"
-              src="/img/ten-score.png"
-              alt="This is Web-Intro-Image"
-              width={180}
-              height={180}
-            />
+          <Start_Buttons
+            title_1=""
+            description_1="밥 먹는 습관부터!"
+            query_1="/Diet/92kg/Eating_Style"
+            title_2=""
+            description_2="88kg"
+            query_2="/Diet/88kg"
+            title_3=""
+            description_3="생활 습관을 바꿔보자!"
+            query_3="/Diet/88kg/Life_Style"
+          />
+          <Start_Buttons
+            title_1=""
+            description_1="84kg"
+            query_1="/Diet/84kg"
+            title_2=""
+            description_2="헬스장에 가볼까?"
+            query_2="/Diet/84kg/GYM"
+            title_3=""
+            description_3="요요 현상"
+            query_3="/Diet/84kg/YoYo_Phenomenon"
+          />
+          <div className="flex">
+            <div className="w-full">
+              <Button
+                title=""
+                description="식이조절 자료실"
+                query="/about/Dietary_Control"
+              ></Button>
+            </div>
           </div>
-        </button>
-      </Link>
-    </div>
-  </div>
-  <div>
-    <div className="w-auto h-[32px]" />
-    <div className="flex">
-      <Link href="/Diet" className="flex-1 aspect-[16/10.3]">
-        <button className="group w-full h-full rounded-[2rem] shadow-xl shadow-gray-300 dark:shadow-gray-700 relative bg-gradient-to-br from-purple-400 to-violet-500 dark:from-teal-300 dark:to-teal-500">
-          <p className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-start justify-center text-white text-center font-bold mt-7 text-3xl">
-            뭐부터 시작해야 할 지 모르는 사람들을 위해
-            <br />
-            "순차적"으로 제공하는 가이드
-          </p>
-          <div className="flex flex-row justify-between w-full h-full px-8">
-            <Image
-              className="rounded-[0.5rem] my-auto mb-12 shadow-xl shadow-gray-600 group-hover:shadow-xl group-hover:shadow-gray-800 group-hover:w-[243px] duration-200"
-              src="/img/Sidebar.png"
-              alt="This is Sidebar image"
-              width={240}
-              height={240}
-            ></Image>
-            <Image
-              className="rounded-[0.5rem] my-auto mb-20 duration-200"
-              src="/img/trend.png"
-              alt="This is Web-Intro-Image"
-              width={90}
-              height={90}
-            />
-            <Image
-              className="rounded-[0.5rem] my-auto mb-12 shadow-xl shadow-gray-600 group-hover:shadow-xl group-hover:shadow-gray-800 group-hover:w-[243px] duration-200"
-              src="/img/TOC.png"
-              alt="This is Sidebar image"
-              width={240}
-              height={240}
-            ></Image>
-          </div>
-        </button>
-      </Link>
-      <Link
-        href="/about/Dietary_Control"
-        className="flex-1 ml-8 aspect-[16/10.3]"
-      >
-        <button className="group w-full h-full rounded-[2rem] shadow-xl shadow-gray-300 dark:shadow-gray-700 relative bg-gradient-to-br from-purple-400 to-violet-500 dark:from-teal-300 dark:to-teal-500">
-          <p className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-start justify-center text-white text-center font-bold mt-7 text-3xl">
-            건강 관리에 대한 양질의 자료들이 모인 "자료실"
-          </p>
-          <div className="flex flex-row justify-center w-full h-full px-8">
-            <Image
-              className="rounded-[0.5rem] my-auto mb-12 shadow-xl shadow-gray-600 group-hover:shadow-xl group-hover:shadow-gray-800 group-hover:w-[534px] duration-200"
-              src="/img/About.png"
-              alt="This is Sidebar image"
-              width={530}
-              height={530}
-            ></Image>
-          </div>
-        </button>
-      </Link>
-    </div>
-  </div>
-  <div className="w-auto h-[120px]"></div>
-  <p className="font-extrabold text-7xl mx-24 mt-12 mb-12 text-center text-black dark:text-white">
-    우리 함께 건강 상식 배우러가요!
-  </p>
-  <div className="mb-48">
-    <Start_Buttons
-      title_1=""
-      description_1="Introduction"
-      query_1="/Diet"
-      title_2=""
-      description_2="92kg"
-      query_2="/Diet/92kg"
-      title_3=""
-      description_3="환경을 만들자!"
-      query_3="/Diet/92kg/Make_Environment"
-    />
-    <Start_Buttons
-      title_1=""
-      description_1="밥 먹는 습관부터!"
-      query_1="/Diet/92kg/Eating_Style"
-      title_2=""
-      description_2="88kg"
-      query_2="/Diet/88kg"
-      title_3=""
-      description_3="생활 습관을 바꿔보자!"
-      query_3="/Diet/88kg/Life_Style"
-    />
-    <Start_Buttons
-      title_1=""
-      description_1="84kg"
-      query_1="/Diet/84kg"
-      title_2=""
-      description_2="헬스장에 가볼까?"
-      query_2="/Diet/84kg/GYM"
-      title_3=""
-      description_3="요요 현상"
-      query_3="/Diet/84kg/YoYo_Phenomenon"
-    />
-    <div className="flex">
-      <div className="w-full">
-        <Button
-          title=""
-          description="식이조절 자료실"
-          query="/about/Dietary_Control"
-        ></Button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-); };
+  );
+};
 
 <HomePage />

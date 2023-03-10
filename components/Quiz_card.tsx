@@ -107,7 +107,7 @@ const Quiz_card = (props: propsType) => {
 
   return (
     <div className="w-full h-100 my-12 bg-gradient-to-br from-purple-400 to-violet-500 dark:from-teal-300 dark:to-teal-500 rounded-xl shadow-lg shadow-gray-300 dark:shadow-gray-700 border-gray-200 border dark:border-none duration-200">
-      <div className="py-8 px-10 h-full w-full items-center">
+      <div className="py-8 px-10 h-full w-full items-center max-lg:py-6 max-lg:px-8 max-sm:py-4 max-sm:px-6">
         <div>
           <p className="self-start font-bold text-white text-2xl">
             This is Quiz

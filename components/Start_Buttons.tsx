@@ -14,22 +14,22 @@ interface propsType {
 
 const Start_Buttons = (props: propsType) => {
   return (
-    <div className="md:flex">
-      <div className="md:mr-4 md:w-1/3 w-full">
+    <div className="lg:flex">
+      <div className="lg:mr-4 lg:w-1/3 w-full">
         <Button
           title={props.title_1}
           description={props.description_1}
           query={props.query_1}
         ></Button>
       </div>
-      <div className="md:ml-4 md:mr-4 md:w-1/3 w-full">
+      <div className="lg:ml-4 lg:mr-4 lg:w-1/3 w-full">
         <Button
           title={props.title_2}
           description={props.description_2}
           query={props.query_2}
         ></Button>
       </div>
-      <div className="md:ml-4 md:w-1/3 w-full">
+      <div className="lg:ml-4 lg:w-1/3 w-full">
         <Button
           title={props.title_3}
           description={props.description_3}
