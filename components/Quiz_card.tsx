@@ -1,6 +1,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useScoreStore } from "@/hooks/score";
+import mixpanel from "mixpanel-browser";
 
 interface propsType {
   answer: string;
@@ -21,7 +22,14 @@ const Quiz_card = (props: propsType) => {
     event.preventDefault();
     console.log(answer);
   };
+
+  const trackEvent = () => {
+    console.log(mixpanel);
+    return mixpanel.track("Quiz Card Submit");
+  };
+
   const notify = () => {
+    trackEvent();
     const hasVisitedPage = localStorage.getItem(props.description) === "true";
     answer === props.answer
       ? toast.custom((t) => (

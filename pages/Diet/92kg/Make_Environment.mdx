@@ -1,27 +1,42 @@
 # 환경을 만들자!
 
 import Button from "../../../components/Button";
+import { useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 
-<div className="lg:flex">
-  <div className="lg:mr-2 lg:w-1/3 w-full">
-    <Button
-      title="Introduction"
-      description="Introduction"
-      query="/Diet/92kg/Make_Environment"
-    ></Button>
-  </div>
-  <div className="lg:ml-2 lg:mr-2 lg:w-1/3 w-full">
-    <Button
-      title="Diet Diary"
-      description="다이어트 일기 만들기"
-      query="/Diet/92kg/Make_Environment"
-    ></Button>
-  </div>
-  <div className="lg:ml-2 lg:w-1/3 w-full">
-    <Button
-      title="Taking Picture"
-      description="자기 자신의 사진 찍어보기"
-      query="/Diet/92kg/Make_Environment"
-    ></Button>
-  </div>
-</div>
+export const Make_Environment = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      mixpanel.track("View Web Interactive Content Page", {
+        contentId: "Make Environment",
+      });
+    }, 1000);
+  }, []);
+  return (
+    <div className="lg:flex">
+      <div className="lg:mr-2 lg:w-1/3 w-full">
+        <Button
+          title="Introduction"
+          description="Introduction"
+          query="/Diet/92kg/Make_Environment"
+        ></Button>
+      </div>
+      <div className="lg:ml-2 lg:mr-2 lg:w-1/3 w-full">
+        <Button
+          title="Diet Diary"
+          description="다이어트 일기 만들기"
+          query="/Diet/92kg/Make_Environment"
+        ></Button>
+      </div>
+      <div className="lg:ml-2 lg:w-1/3 w-full">
+        <Button
+          title="Taking Picture"
+          description="자기 자신의 사진 찍어보기"
+          query="/Diet/92kg/Make_Environment"
+        ></Button>
+      </div>
+    </div>
+  );
+};
+
+<Make_Environment />

@@ -5,8 +5,15 @@ import Start_Buttons from "../components/Start_Buttons";
 import Button from "../components/Start_Button";
 import Middle from "../components/Middle";
 import Middle_2xl from "../components/Middle_2xl";
+import mixpanel from "mixpanel-browser";
+import { useEffect } from "react";
 
 export const HomePage = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      mixpanel.track("Enter Main Page");
+    }, 1000);
+  }, []);
   return (
     <div className="2xl:mx-auto mx-0 flex justify-center items-center">
       <div className="w-[1408px] max-2xl:w-full">

@@ -13,12 +13,20 @@ import Doc_Image from "../../components/Doc_Image";
 한 사람의 페르소나를 설정하여봅시다. 살을 정말 빼고 싶은 고도비만의 한 여성. 살을 정말 빼고 싶지만, 그걸 옆에서 지켜봐줄 수 있는 사람도 없고, 의지도 없습니다. 그리고 실천을 시작할 수 있는 지식이 있는 것도 아니고요. 이 페르소나의 이름은 ‘수지’, 앞으로 써내려갈 이야기들의 주인공이 될 페르소나입니다. 지금부터 수지가 어떻게 체중을 감량하는지 잘 살펴봅시다..!! 약 92kg에서 58kg까지 살을 빼나가는 과정에서 여러분들은 많은 동기와 건강에 대한 지식들, 다이어트 방법까지 얻어가실 수 있을 것입니다. 함께 들어가봅시다..!!
 
 import PageKey from "../../components/PageKey";
-
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 
 export const Final = () => {
   const router = useRouter();
-  return <PageKey route={router.pathname} />;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      mixpanel.track("View Web Interactive Content Page", {
+        contentId: "Introduction",
+      });
+    }, 1000);
+  }, []);
+  return <PageKey route={router.pathname} EventName="Introduction" />;
 };
 
 <Final />

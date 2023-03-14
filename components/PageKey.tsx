@@ -1,9 +1,11 @@
 import { useScoreStore } from "@/hooks/score";
 import React, { useEffect, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
+import mixpanel from "mixpanel-browser";
 
 interface propsType {
   route: string;
+  EventName: string;
 }
 
 const PageKey = (props: propsType) => {
@@ -14,6 +16,7 @@ const PageKey = (props: propsType) => {
   const handleInView = useCallback(() => {
     const hasVisitedDocPage = localStorage.getItem(docPageKey) === "true";
     if (!hasVisitedDocPage) {
+      mixpanel.track("Read Complete Content", { contentId: props.EventName });
       const scoreKey = `user-score`;
       const make_environment = "user-make-environment";
       const eating_style = "user-eating-style";

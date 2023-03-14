@@ -15,10 +15,19 @@ import Quiz_card from "../../../../components/Quiz_card";
 import PageKey from "../../../../components/PageKey";
 
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 
 export const Final = () => {
   const router = useRouter();
-  return <PageKey route={router.pathname} />;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      mixpanel.track("View Web Interactive Content Page", {
+        contentId: "Gym Moisture",
+      });
+    }, 1000);
+  }, []);
+  return <PageKey route={router.pathname} EventName="Gym Moisture" />;
 };
 
 <Final />

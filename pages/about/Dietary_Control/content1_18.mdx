@@ -37,10 +37,19 @@
 import PageKey from "../../../components/PageKey";
 
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 
 export const Final = () => {
   const router = useRouter();
-  return <PageKey route={router.pathname} />;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      mixpanel.track("View Web Interactive Content Page", {
+        contentId: "About Content1-18",
+      });
+    }, 1000);
+  }, []);
+  return <PageKey route={router.pathname} EventName="About Content1-18" />;
 };
 
 <Final />
