@@ -53,10 +53,10 @@ const Read = (props: propsType) => {
         localStorage.setItem("user-88kg", eight_eight_score.toString());
       }
       if (localStorage.getItem("user-gym") === "5") {
-        if (localStorage.getItem("/Diet/84kg/GYM") !== "true") {
+        if (localStorage.getItem("/Diet/84kg/gym") !== "true") {
           eight_four_score += 1;
         }
-        localStorage.setItem("/Diet/84kg/GYM", "true");
+        localStorage.setItem("/Diet/84kg/gym", "true");
         localStorage.setItem("user-84kg", eight_four_score.toString());
       }
       if (localStorage.getItem("user-yoyo") === "1") {

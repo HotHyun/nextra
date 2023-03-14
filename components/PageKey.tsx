@@ -51,7 +51,7 @@ const PageKey = (props: propsType) => {
         life_score += 1;
         localStorage.setItem(life_style, life_score.toString());
       }
-      if (props.route?.includes("/Diet/84kg/GYM/")) {
+      if (props.route?.includes("/Diet/84kg/gym/")) {
         gym_score += 1;
         localStorage.setItem(gym, gym_score.toString());
       }
