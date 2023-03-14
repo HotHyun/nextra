@@ -4,7 +4,7 @@ import Button from "../../../components/Button";
 import { useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 
-export const gym = () => {
+export const Gym = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       mixpanel.track("View Web Interactive Content Page", {
@@ -58,4 +58,4 @@ export const gym = () => {
   );
 };
 
-<gym />
+<Gym />
