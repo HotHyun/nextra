@@ -4,6 +4,7 @@ import Score_Bar from "./components/Score_Bar";
 import Read from "./components/Read";
 import Logo from "./components/Logo";
 import Footer from "./components/footer";
+import LogIn_Button from "./components/LogIn_Button";
 
 const config: DocsThemeConfig = {
   logo: (
@@ -11,8 +12,8 @@ const config: DocsThemeConfig = {
       <Logo></Logo>
     </span>
   ),
-  project: {
-    link: "https://github.com/HotHyun/nextra",
+  navbar: {
+    extraContent: <LogIn_Button></LogIn_Button>,
   },
   docsRepositoryBase: "https://github.com/HotHyun/nextra",
   footer: {
