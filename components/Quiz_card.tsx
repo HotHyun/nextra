@@ -26,7 +26,7 @@ const Quiz_card = (props: propsType) => {
 
   const trackEvent = () => {
     console.log(mixpanel);
-    return mixpanel.track("Submit Quiz Card", { contentId: props.EventName });
+    return mixpanel.track("Submit Quiz Card", { quizId: props.EventName });
   };
 
   const notify = () => {

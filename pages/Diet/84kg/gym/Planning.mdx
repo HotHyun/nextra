@@ -34,6 +34,7 @@ export const Final = () => {
     const timer = setTimeout(() => {
       mixpanel.track("View Web Interactive Content Page", {
         contentId: "Gym Planning",
+        quizId: "Gym Planning",
       });
     }, 1000);
   }, []);
