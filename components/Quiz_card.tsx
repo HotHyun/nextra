@@ -7,6 +7,7 @@ interface propsType {
   answer: string;
   problem: string;
   description: string;
+  EventName: string;
 }
 
 const Quiz_card = (props: propsType) => {
@@ -25,7 +26,7 @@ const Quiz_card = (props: propsType) => {
 
   const trackEvent = () => {
     console.log(mixpanel);
-    return mixpanel.track("Quiz Card Submit");
+    return mixpanel.track("Submit Quiz Card", { contentId: props.EventName });
   };
 
   const notify = () => {
